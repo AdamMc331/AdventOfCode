@@ -2,7 +2,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 public class AdventTwo {
-    private static final String INPUT = readInput();
+	private static final String INPUT_FILE = "input.txt";
+    private static final String INPUT = readInput(INPUT_FILE);
     private static final String[] LINES = INPUT.split("\n");
     private static final char UP = 'U';
     private static final char DOWN = 'D';
@@ -105,8 +106,8 @@ public class AdventTwo {
         System.out.println("Code part two: " + code);
     }
 
-    private static String readInput() {
-        try(BufferedReader br = new BufferedReader(new FileReader("input.txt"))) {
+    private static String readInput(String fileName) {
+        try(BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
 
