@@ -87,12 +87,10 @@ public class AdventOne {
                 }
 
                 Point point = new Point(currentX, currentY);
-                if(points.contains(point)) {
+                if(!points.add(point)) {
                     int totalBlocks = Math.abs(point.x) + Math.abs(point.y);
                     System.out.println("Total blocks part two: " + totalBlocks);
                     return;
-                } else {
-                    points.add(point);
                 }
             }
         }
